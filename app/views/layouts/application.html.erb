@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+	
+		<meta charset="utf-8" />
+		<title>PaperRocket</title>
+		
+		<!-- Meta -->
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		
+		<!-- Favicon and RSS -->
+		<link rel="shortcut icon" href="img/favicon.png">
+        <link rel="alternate" type="application/rss+xml" title="" href="">
+        
+        <!-- Touch Icons -->
+		<link rel="apple-touch-icon" href="img/iphone.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="img/ipad.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="img/iphone4.png" />
+		
+		<!-- Stylesheets -->
+		<%= stylesheet_link_tag    "application", :media => "all" %>
+  		<%= javascript_include_tag "application" %>
+  		<%= csrf_meta_tags %>
+		
+	</head>
+	
+	<body>
+
+		<% flash.each do |type, message| %>
+			<div class="alert <%= flash_class type %>">
+				<button class="close" data-dismiss="alert">x</button>
+				<%= message %>
+			</div>
+		<% end %>
+
+		<%= yield %>
+
+	</body>
+</html>

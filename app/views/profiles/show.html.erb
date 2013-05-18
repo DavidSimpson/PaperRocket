@@ -1,0 +1,43 @@
+<aside class="cover cover-user picker-target">
+	<div class="cover-table">
+		<div class="cover-row">
+			<div class="cover-img" data-url="https://d233eq3e3p3cv0.cloudfront.net/max/1000/0*o1HbUmIMUww1a9G3.jpeg" data-id="0*o1HbUmIMUww1a9G3.jpeg" style="background-image:url('https://d233eq3e3p3cv0.cloudfront.net/max/1000/0*o1HbUmIMUww1a9G3.jpeg')"></div>
+		</div>
+		<div class="cover-row">
+			<div class="cover-body">
+				<div class="cover-body-inner">
+					<span class="cover-avatar">
+						<%= image_tag @author.gravatar_url %>
+					</span>
+					<h1 class="cover-title"><%= @author.full_name %></h1>
+					<p class="cover-description">Was in astrophysics, now a video game UI/UX designer. Also a belly dancer, alpaca farmer, yarn spinner. See my work at <a rel="nofollow" target="_blank" href="http://www.carynvainio.com">http://www.carynvainio.com</a>.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</aside>
+
+<div class="wrapper">
+  <div class="wrapper-inner">
+
+  	<% if @articles %>
+	    <% @articles.each do |article| %>
+
+	    <article class="post-item post-status-undefined">
+
+	      <h3 class="post-item-title">
+	        <%= link_to article.title, article %>
+	      </h3>
+
+	      <div class="post-item-meta">
+	      </div>
+
+	      <%= link_to truncate(article.content, :length => 250), '#', class: 'post-item-snippet' %>
+
+	    </article>
+
+	    <% end %>
+    <% end %>
+
+  </div>
+</div>

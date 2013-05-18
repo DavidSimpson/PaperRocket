@@ -1,0 +1,89 @@
+    <aside class="aside">
+
+      <a href="<%= root_path %>" class="logo"></a>
+
+      <% if author_signed_in? %>
+      <nav class="primary-nav">
+
+        <ul>
+          <li><a href="<%= new_article_path %>"><i class="icon icon-new-article"></i></a></li>
+          <li><a href=""><i class="icon icon-drafts"></i></a></li>
+          <li><a href=""><i class="icon icon-comments"></i></a></li>
+          <li><a href="<%= edit_author_registration_path %>"><i class="icon icon-settings"></i></a></li>
+          <li><a href="<%= logout_path %>"><i class="icon icon-logout"></i></a></li>
+        </ul>
+
+      </nav>
+      <% end %>
+
+    </aside>
+
+    <div class="wrapper home clearfix">
+
+      <div class="wrapper-inner">
+
+        <div class="editors-picks">
+
+          <div class="item-header">Editor&apos;s Picks</div>
+
+          <div class="editors-picks-articles clearfix">
+
+            <div class="editors-picks-article editors-picks-article-1">
+              <div class="editors-picks-article-overlay"></div>
+              <h2 class="editors-picks-article-title">Trying to Discover Your Passion Is a Wast of Time</h2>
+            </div>
+
+            <div class="editors-picks-article editors-picks-article-2">
+              <div class="editors-picks-article-overlay"></div>
+              <h2 class="editors-picks-article-title">Tell a Four Word Story</h2>
+            </div>
+
+            <div class="editors-picks-article editors-picks-article-3">
+              <div class="editors-picks-article-overlay"></div>
+              <h2 class="editors-picks-article-title">Following Your Dreams</h2>
+            </div>
+
+            <div class="editors-picks-article editors-picks-article-4">
+              <div class="editors-picks-article-overlay"></div>
+              <h2 class="editors-picks-article-title">More Sleep, and Fewer Hours at the Office</h2>
+            </div>
+
+          </div>
+
+        </div>
+
+        <% if @articles %>
+        <div class="featured-articles">
+
+          <div class="item-header article-nav">
+            <i class="icon icon-nav"></i>
+            <a class="active" href="">Featured</a>
+            <a href="">All Articles</a>
+          </div>
+
+          <ul class="article-list">
+
+            <% @articles.each do |article| %>
+            <li>
+
+              <div class="article-pointer"></div>
+              <h2 class="article-title"><%= link_to article.title, article %></h2>
+              <div class="article-meta">
+                <span class="article-author">By <%= link_to article.author.full_name, profile_path(article.author) %></span>
+                <span class="article-category"> in <%= link_to article.category.name, article.category %></span>
+              </div>
+              <div class="article-author-image">
+                <%= link_to image_tag(article.author.gravatar_url), profile_path(article.author) %>
+              </div>
+
+            </li>
+            <% end %>
+
+          </ul>
+
+        </div>
+        <% end %>
+
+      </div>
+
+    </div>

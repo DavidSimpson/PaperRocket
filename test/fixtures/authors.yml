@@ -1,0 +1,11 @@
+david:
+  first_name: "David"
+  last_name: "Simpson"
+  email: "david@david-simpson.net"
+  profile_name: "smpsn"
+
+tony:
+  first_name: "Tony"
+  last_name: "Hawks"
+  email: "tony@david-simpson.net"
+  profile_name: "tony"

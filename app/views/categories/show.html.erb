@@ -1,0 +1,52 @@
+<aside class="cover cover-home">
+
+  <div class="cover-img" style="background-image: url('//dnqgz544uhbo8.cloudfront.net/_/fp/img/home/15.e2lYGB--9rK5NxM_3B3i4A.jpg')"></div>
+
+  <div class="cover-body">
+
+    <div class="cover-body-inner">
+
+      <h1 class="cover-title"><%= @category.name %></h1>
+
+      <p class="cover-description"><%= @category.description %></p>
+
+      <div class="cover-actions">
+        <button class="btn btn-primary btn-new-post" data-action="open-new-post">
+          <span class="icons icons-new-post"></span>
+          New Post
+        </button>
+      </div>
+
+    </div>
+
+  </div>
+
+</aside>
+
+<div class="wrapper">
+  <div class="wrapper-inner">
+
+  	<% if @category.articles %>
+	    <% @category.articles.each do |article| %>
+
+	    <article class="post-item post-status-undefined">
+
+	      <h3 class="post-item-title">
+	        <%= link_to article.title, article %>
+	      </h3>
+
+	      <div class="post-item-meta">
+	      </div>
+
+	      <%= link_to truncate(article.content, :length => 250), '#', class: 'post-item-snippet' %>
+
+	    </article>
+
+	    <% end %>
+    <% end %>
+
+  </div>
+</div>
+
+<%= link_to 'Edit', edit_category_path(@category) %> |
+<%= link_to 'Back', categories_path %>

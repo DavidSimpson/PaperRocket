@@ -1,0 +1,313 @@
+/*-----------------------------------------------------------------------------------
+
+	PaperRocket – https://www.paperrocket.co/
+
+-----------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------*/
+/*	Less Variables
+/*-----------------------------------------------------------------------------------*/
+/* Colours */
+/* Transitions */
+.all-transition {
+  -webkit-transition: all linear 0.1s;
+  -moz-transition: all linear 0.1s;
+  -o-transition: all linear 0.1s;
+  transition: all linear 0.1s;
+}
+/* Borders & Shadows */
+.border {
+  border: 1px solid #e5e5e5;
+}
+/*-----------------------------------------------------------------------------------*/
+/*	Clear
+/*-----------------------------------------------------------------------------------*/
+/* For modern browsers */
+.clear:before,
+.clear:after {
+  content: "";
+  display: table;
+}
+.clear:after {
+  clear: both;
+}
+/* For IE 6/7 (trigger hasLayout) */
+.clear {
+  zoom: 1;
+}
+/*-----------------------------------------------------------------------------------*/
+/*	Main Styles
+/*-----------------------------------------------------------------------------------*/
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Proxima Nova', Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  color: #333332;
+}
+/*-----------------------------------------------------------------------------------*/
+/*	Header Styles
+/*-----------------------------------------------------------------------------------*/
+header {
+  position: fixed;
+  top: 15px;
+  width: 100%;
+}
+.header-inner {
+  padding: 0 15px;
+}
+.logo {
+  display: block;
+  width: 45px;
+  height: 47px;
+  float: left;
+  background: url('img/logo.png') no-repeat;
+}
+.logout-btn {
+  color: #aaa;
+  font-weight: bold;
+  font-size: 11px;
+  border-radius: 3px;
+  border: 1px solid #E5E5E5;
+  padding: 5px 10px;
+  float: right;
+}
+/*-----------------------------------------------------------------------------------*/
+/*	Post Styles
+/*-----------------------------------------------------------------------------------*/
+.post-container {
+  width: 700px;
+  margin: 130px auto 0;
+}
+.post-title {
+  font-family: 'TisaPro', serif;
+  font-weight: bold;
+  font-size: 72px;
+  line-height: 90px;
+  text-align: center;
+  margin: 0;
+}
+.post-meta {
+  font-size: 20px;
+  color: #aaa;
+  text-align: center;
+  margin: 30px 0 70px;
+}
+.post-author-badge {
+  border-radius: 3px;
+  background: #6EC5DD;
+  margin: 0 5px;
+  padding: 7px 10px 5px;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: bold;
+  color: #fff;
+}
+.post-content {
+  font-size: 20px;
+  color: #666;
+  padding: 0 25px;
+}
+.post-content p {
+  margin-bottom: 20px;
+  line-height: 40px;
+}
+.post-content a {
+  color: #4cb9e2;
+  text-decoration: none;
+}
+.post-content a:hover {
+  text-decoration: underline;
+}
+.post-sharing {
+  margin: 70px 0 80px;
+  padding-top: 70px;
+  border-top: 1px solid #e5e5e5;
+}
+.post-tick {
+  float: left;
+}
+.post-tick span {
+  margin-left: 65px;
+  color: #aaa;
+}
+.btn {
+  border-radius: 3px;
+  display: inline-block;
+}
+.tick-btn {
+  position: absolute;
+  margin: -10px 0 0;
+  width: 45px;
+  height: 30px;
+  background: #dadada url('img/tick-icon.png') no-repeat center center;
+  -moz-box-shadow: 0px 3px 0px 0px #C6C6C6;
+  -webkit-box-shadow: 0px 3px 0px 0px #C6C6C6;
+  box-shadow: 0px 3px 0px 0px #C6C6C6;
+}
+.tweet-button {
+  float: right;
+}
+.distract-btn {
+  padding: 35px 0;
+  width: 100%;
+  border-radius: 5px;
+  background: #6EC4DC;
+  -moz-box-shadow: 0px 4px 0px 0px #79AAB9;
+  -webkit-box-shadow: 0px 4px 0px 0px #79AAB9;
+  box-shadow: 0px 4px 0px 0px #79AAB9;
+  font-size: 20px;
+  color: #57A4B9;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+}
+.adverts {
+  margin-top: 50px;
+}
+.supporters {
+  background: url('img/supporters.png') no-repeat center 80px;
+  width: 349px;
+  height: 180px;
+  border-right: 1px solid #e5e5e5;
+  float: left;
+  color: #aaa;
+  text-align: center;
+  padding-top: 30px;
+}
+.advert {
+  widows: 350px;
+  height: 200px;
+  float: left;
+  padding-top: 30px;
+}
+.advert img {
+  padding: 0 111px;
+  margin-bottom: 15px;
+}
+.ad-text {
+  width: 250px;
+  margin: 0 auto 15px;
+  text-align: center;
+  color: #aaa;
+}
+.ad-network {
+  color: #aaa;
+  font-size: 11px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+/*-----------------------------------------------------------------------------------*/
+/*	Login
+/*-----------------------------------------------------------------------------------*/
+.login-container {
+  width: 250px;
+  height: 285px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -125px;
+  margin-top: -170px;
+}
+.logo-top {
+  width: 250px;
+  text-align: center;
+}
+.logo-center {
+  display: block;
+  width: 45px;
+  height: 47px;
+  margin: 0 auto;
+  float: none;
+}
+.logo-title {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #666;
+  margin: 15px 0 5px;
+}
+.login-title {
+  text-align: center;
+  font-weight: normal;
+  color: #aaa;
+  font-size: 15px;
+  margin: 0 0 30px;
+}
+.login-form {
+  width: 250px;
+}
+input[type='text'],
+input[type='email'],
+input[type='password'] {
+  border-radius: 3px;
+  border: 1px solid #e5e5e5;
+  padding: 9px 10px 7px;
+  width: 228px;
+  font-size: 15px;
+  color: #666;
+  font-family: 'Proxima Nova';
+  margin-bottom: 20px;
+  -webkit-transition: all linear 0.1s;
+  -moz-transition: all linear 0.1s;
+  -o-transition: all linear 0.1s;
+  transition: all linear 0.1s;
+}
+input:focus {
+  outline: none;
+  border: 1px solid #96D3E5;
+  -moz-box-shadow: 0px 0px 8px 0px rgba(122, 192, 212, 0.39);
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(122, 192, 212, 0.39);
+  box-shadow: 0px 0px 8px 0px rgba(122, 192, 212, 0.39);
+}
+input[type='submit'] {
+  width: 250px;
+  height: 45px;
+  border-radius: 3px;
+  text-indent: -9999px;
+  border: none;
+  background: #6ec4dc url('img/tick-icon-blue.png') no-repeat center center;
+  -moz-box-shadow: 0px 3px 0px 0px #6EABBB;
+  -webkit-box-shadow: 0px 3px 0px 0px #6EABBB;
+  box-shadow: 0px 3px 0px 0px #6EABBB;
+  -webkit-transition: all linear 0.1s;
+  -moz-transition: all linear 0.1s;
+  -o-transition: all linear 0.1s;
+  transition: all linear 0.1s;
+}
+input[type='submit']:hover {
+  background: #59bcd7 url('img/tick-icon-blue.png') no-repeat center center;
+}
+/*-----------------------------------------------------------------------------------*/
+/*	Footer
+/*-----------------------------------------------------------------------------------*/
+footer {
+  border-top: 1px solid #e5e5e5;
+  margin-top: 100px;
+  padding: 35px 100px;
+}
+.footer-nav {
+  float: left;
+}
+.footer-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.footer-nav li {
+  float: left;
+  margin-right: 50px;
+}
+.footer-nav li a {
+  font-size: 13px;
+  color: #c5c5c5;
+  text-decoration: none;
+  font-weight: bold;
+}
+.copyright {
+  float: right;
+  font-size: 13px;
+  color: #c5c5c5;
+}

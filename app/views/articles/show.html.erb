@@ -1,0 +1,40 @@
+<section class="post-page-wrapper post-page-wrapper-contain">
+  <div class="post-page-wrapper-inner">
+    <div class="post-author-side">
+      <div class="post-author-card">
+
+        <%= link_to image_tag(@article.author.gravatar_url), '#', class: 'post-author-image' %>
+
+        <div class="post-author-info">
+          <a href="<%= @article.author.full_name %>" class="post-author-name"><%= @article.author.full_name %></a>
+          <p>Co-author of Simple: Conquering the Crisis of Complexity (coming April 2013 from <a href="http://twitter.com/twelvebooks" target="_blank" title="Twitter profile for @twelvebooks">@twelvebooks</a>). Executive Director, Simplification at <a href="http://twitter.com/SiegelGale" target="_blank" title="Twitter profile for @SiegelGale">@SiegelGale</a> in NYC.</p>
+          <p></p>
+        </div>
+        <div class="post-published-date">
+          <strong>Published</strong>
+          <p><time class="post-date"><%= time_tag(@article.created_at) %></time></p>
+        </div>
+      </div>
+    </div>
+    <header class="post-header">
+      <div class="post-meta">
+        <span class="post-meta-author">
+          <a href="/@Irene_Etzkorn" data-id="274b521aef21" title="Go to the profile of Irene Etzkorn" class="post-author"><%= @article.author.full_name %></a><span class="divider-word"> in </span></span><a href="/breakthrough-simplicity" data-collection-slug="breakthrough-simplicity" title="Go to Breakthrough Simplicity">Breakthrough Simplicity</a>
+        </div>
+      </div>
+      <h1 itemprop="name" tabindex="1" class="post-title"><%= @article.title %></h1>
+    </header>
+    <div class="post-content">
+      <div class="post-content-inner">
+        <div tabindex="3" class="post-field body notes-source">
+          <%= @article.content %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <% if author_signed_in? %>
+    <%= link_to 'Edit', edit_article_path(@article) %> |
+    <%= link_to 'Back', articles_path %>
+  <% end %>
+</div>

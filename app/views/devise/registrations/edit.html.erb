@@ -1,0 +1,69 @@
+<div class="system-page">
+  <aside class="cover cover-system">
+    <div class="cover-img">
+      <span class="icons icons-settings cover-icon"></span>
+    </div>
+    <div class="cover-body">
+      <div class="cover-body-inner">
+        <h1 class="cover-title">Settings</h1>
+        <p class="cover-description">Viewing the account settings for David Simpson</p>
+        <a class="btn" href="/m/signout/2FOHOslNnftKxiMA">Sign out</a>
+      </div>
+    </div>
+  </aside>
+
+  <section class="wrapper settings-user" tabindex="-1">
+    <div class="wrapper-inner">
+      <div class="bucket-header">
+        <nav class="bucket-sort">
+          <h5 class="bucket-title">
+            <span class="no-link">Settings</span>
+          </h5>
+        </nav>
+      </div>
+
+      <section class="setting-item">
+
+        <%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }, html: {class: "form-horizontal"}) do |f| %>
+        <%= devise_error_messages! %>
+
+        <div class="setting-item-info">
+          <h2 class="setting-item-title">Change email and password</h2>
+          
+          <%= f.input :email, input_html: { class: 'setting-item-input setting-item-email-input' }, label: false %>
+          
+          <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+            <p class="setting-item-desc">Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
+          <% end %>
+
+          <%= f.input :password, :autocomplete => "off", input_html: { class: 'setting-item-input' }, label: false, placeholder: 'New password' %>
+
+          <%= f.input :password_confirmation, input_html: { class: 'setting-item-input' }, label: false, placeholder: 'Confirm new password' %>
+
+          <%= f.input :current_password, input_html: { class: 'setting-item-input' }, label: false, placeholder: 'Current password' %>
+
+          <div class="form-actions">
+            <%= f.button :submit %>
+          </div>
+        </div>
+
+        <% end %>
+
+      </section>
+      <section class="setting-item">
+
+        <h3>Cancel my account</h3>
+
+        <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete, class: 'btn btn-danger' %>.</p>
+
+        <%= link_to "Back", :back %>
+      
+        <footer class="wrapper-footer">
+          <a class="wrapper-footer-link" title="View open job positions at Medium" href="//medium.com/jobs">Work at Medium</a>
+          <a class="wrapper-footer-link" title="Read Medium’s policies" href="//medium.com/policy">Policies</a>
+          <a class="wrapper-footer-link" title="Visit Medium’s help center" href="//medium.com/help-center">Help</a>
+        </footer>
+      </section>
+    </div>
+  </section>
+</div>
